@@ -8,7 +8,7 @@ module tb_full_behavior ();
     adder DUT (
         .data_1_i(data_1),
         .data_2_i(data_2),
-        .sum_o(sum)
+        .sum_o   (sum)
     );
 
     initial begin
