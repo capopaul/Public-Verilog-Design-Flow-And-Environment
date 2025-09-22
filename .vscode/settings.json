@@ -4,6 +4,10 @@
     "[verilog]": {
         "editor.defaultFormatter": "kukdh1.verible-formatter"
     },
+    "editor.rulers": [
+        80,
+        100
+    ],
     "editor.formatOnSave": true,
     "verilog.linting.iverilog.runAtFileLocation": true,
     "ctags-companion.command": "ctags -R --fields=+nKz -f .vscode/.tags --langmap=SystemVerilog:+.v -R rtl /opt/uvm-1.2/src",
