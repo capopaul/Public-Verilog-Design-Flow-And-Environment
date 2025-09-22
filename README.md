@@ -33,8 +33,11 @@ This repo aims to provide a basic structure to starts a verilog project. The two
 - Execute `make rungui` to run the test bench and see the waveform with GTKwave form.
 - Execute `make clean` to remove the content of the simulation cache folder (`./simulation/cache/`).
 
+## Using the template
 - To create your own module, duplicate `adder_exemple` folder.
 - Rename the folder with your own name.
 - Create your rtl files and test benches.
 - Edit the first line of the file `src/your_module_name/simulation/tb_full_behavior/Makefile` with your new test bench name.
 - if you want to create multiple test benches, duplicate the folder tb_full_behavior inside simulation.
+
+- After running `make rungui`, the terminal is usually busy with GTKwave. If you open a second terminal and run `make run` and then click refresh inside GTKwave gui the waves will be updated. This avoid to always open, import signal, close and restart.
