@@ -11,17 +11,17 @@ This repo aims to provide a basic structure to starts a verilog project. The two
     - Language Server: verible-verilog-ls (autocompletion, go to definition/reference, ...) 
 
 ## Setup the Verilog Deisgn Flow
-- install Make
-- install iverilog
-- install GTKWave
+- install Make     -> to check run `make -v`
+- install iverilog -> to check run `iverilog -v`
+- install GTKWave  -> to check run `gtkwave -v`
 
 ## Setup VS code 
-- install Visual Studio Code.
+- install Visual Studio Code. -> to check run `code`
 - install the `Verilog-HDL/SystemVerilog/Bluespec SystemVerilog` extension.
 - the description of the extension asks to install `ctags` so do it.
 - install the `Verible Formatter` extension.
-- install `verible` (download the bin files from the last release).
-- install `verilator`.
+- install `verible` (download the bin files from the last release). To check run `verible-verilog-lint` should return nothing.
+- install `verilator`. To check run `verilator --version`.
 - the configuration file for all those extensions is available in `./.vscode/settings.json` and should be automatically read by vscode for this workspace.
 
 ## Run
