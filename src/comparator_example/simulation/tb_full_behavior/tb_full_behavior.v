@@ -89,6 +89,7 @@ module tb_full_behavior ();
         check_A_eq_B_reg_equals(0);
         check_A_lt_B_reg_equals(0);
 
+        $display("TEST tb_full_behavior PASSED");
         $finish;
     end
 
