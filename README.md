@@ -16,7 +16,7 @@ This repo aims to provide a basic structure to starts a verilog project. The two
 
 Choose one between the two flow available:
 
-- [Setup Modelsim](flow/modelsim/modelsim_flow.md)
+- [Setup Modelsim](flow/modelsim/modelsim_flow.md) (default)
 - [Setup Iverilog & GTKWave](flow/iverilog/iverilog_flow.md)
 
 ## Setup VS code
@@ -34,7 +34,11 @@ Choose one between the two flow available:
 - Open a terminal and go to `./src/` directory. It contains all the verilog modules.
 - Open the example module `cd adder_example`.
 - The `./rtl` folder contains the behavior verilog files of the module.
-- The `./simulation` folder contains the simulation file for the rtl code. Open it `cd simulation`.
+- The `./simulation` folder contains the simulation file for the rtl code. Open it `cd simulation` and enter the test bench: `cd tb_full_behavior`.
+- The default flow used is modelsim. If you want to use modelsim flow, skip this step. If you want to use iverilog & gtkwave flow, replace the makefile:
+  - `rm Makefile`
+  - `cp ../../../../flow/iverilog/makefile_iverilog.mak Makefile`
+  - you might need to rename on the first line the test bench name.
 - Execute `make run` to run the test bench.
 - Execute `make rungui` to run the test bench and see the waveform with GTKwave form.
 - Execute `make clean` to remove the content of the simulation cache folder (`./simulation/cache/`).

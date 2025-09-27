@@ -1,16 +1,16 @@
 tb_file_name = tb_edge_case
+work_dir = ./cache
+
 run:
-	if [ ! -d "./cache/" ]; then \
-  		mkdir ./cache; \
-	fi;\
-	iverilog -o ./cache/$(tb_file_name).vvp $(tb_file_name).v;\
-	vvp ./cache/$(tb_file_name).vvp;
+	@if [ ! -d $(work_dir) ]; then \
+		vlib $(work_dir); \
+	fi
+	vmap work $(work_dir)
+	vlog $(tb_file_name).v +acc=rnpc -lint
 
 rungui:
 	make run;\
-	gtkwave ./cache/$(tb_file_name).vcd;
+	vsim work.$(tb_file_name) -do "add wave /*; run -all;"
 
 clean:
-	if [ -d "./cache/" ]; then \
-  		rm -r ./cache; \
-	fi;
+	rm -rf $(work_dir) transcript vsim.wlf
