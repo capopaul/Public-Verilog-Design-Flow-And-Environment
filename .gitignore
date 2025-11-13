@@ -1,4 +1,17 @@
+# Author: Paul Capgras
+# Date : Nov 2025
+
+# Simulation
 cache
 modelsim.ini
 transcript
 vsim.wlf
+
+# Synthesis
+fv/
+results/
+.rs*
+
+# Other
+chat.rapidgpt
+test_syn/
