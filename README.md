@@ -8,8 +8,9 @@
     2. [Setup the Productive VS Code Environment](#22-setup-the-productive-vs-code-environment)
 3. [Using the template](#3-using-the-template)
     1. [Run Simulations](#31-run-simulations)
-    2. [Run Synthesis](#32-run-synthesis)
-    3. [Develop your own modules](#33-develop-your-own-modules)
+    2. [Run Code Coverage](#32-run-code-coverage)
+    3. [Run Synthesis](#33-run-synthesis)
+    4. [Develop your own modules](#34-develop-your-own-modules)
 
 ## 1. Description
 
@@ -22,6 +23,7 @@ The flow include the following features:
 - **Verilog Design Flow**:
   - Simulation using iverilog or modelsim
   - Waveform visualization using GTKWave form or modelsim
+  - (Experimental - Modelsim flow only) Code coverage
   - (Experimental) Synthesis using Cadence Genus
 - **Productive Visual Studio Code Environment**:
   - Linting: verilator and verible (warnings in your IDE)
@@ -72,7 +74,16 @@ Choose one between the two flow available:
 
 **Tips**: After running `make rungui`, the terminal is usually busy with wave visualization. If you open a second terminal and run `make run` and then click refresh or restart the simulation inside the GUI. The waves will be updated. This avoid to always open, import signal, close and restart. The command in modelsim is `restart -f; run 10ms`.
 
-### 3.2 Run synthesis
+### 3.2 Run code coverage
+
+(Experimental)
+
+Only available if you are using the modelsim flow.
+
+- Inside the `./simulation`, run `make coverage`
+- A folder `covhtmlreport` should have been created. Open it and open with a web browser `index.html`
+
+### 3.3 Run synthesis
 
 (Experimental)
 
@@ -80,7 +91,7 @@ Simple synthesis setup is provided for Cadence Genus tool.
 
 Inside a module folder, you can find an `rtl`, `simulation` and a `synthesis` folder. Open this `synthesis` folder and take a look at its `README.md`.
 
-### 3.3 Develop your own modules
+### 3.4 Develop your own modules
 
 - To create your own module, duplicate `adder_exemple` folder.
 - Rename the folder with your own name.

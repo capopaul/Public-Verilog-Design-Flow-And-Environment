@@ -6,6 +6,8 @@ cache
 modelsim.ini
 transcript
 vsim.wlf
+coverage_report.ucdb
+**/covhtmlreport/
 
 # Synthesis
 fv/
