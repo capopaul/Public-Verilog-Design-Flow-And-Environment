@@ -122,7 +122,7 @@ time_info OPT
 
 # save reports
 write_snapshot -outdir $REPORTS_PATH/syn_opt/ -tag syn_opt
-report_summary -directory $REPORTS_PATHsyn_opt/
+report_summary -directory $REPORTS_PATH/syn_opt/
 
 
 ################################################################################
